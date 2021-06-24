@@ -21,11 +21,11 @@ export function Home() {
     if(!user) {
       try {
         await signInWithGoogle();
-        history.push('/rooms/new');
       } catch (error) {
         console.log(error.message);
       }
     }
+    history.push('/rooms/new');
   }
 
   return (
